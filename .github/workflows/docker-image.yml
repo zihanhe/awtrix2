@@ -17,7 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag smarthomefans/awtrix2:$(date +%s)
+      run: docker build . --file Dockerfile --tag smarthomefans/awtrix2:latest
+    - name: docker tag 
+      run: docker tag smarthomefans/awtrix2:latest smarthomefans/awtrix2:$(date +%s)
     - name: login the docker hub
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: upload docker image
