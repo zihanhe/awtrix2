@@ -1,8 +1,8 @@
 FROM openjdk:12-alpine
 
 RUN apk add tzdata wget && \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo "Asia/Shanghai" > /etc/timezone && \
+    cp /usr/share/zoneinfo/Pacific/Auckland /etc/localtime && \
+    echo "Pacific/Auckland" > /etc/timezone && \
     wget -P /awtrix https://blueforcer.de/awtrix/stable/awtrix.jar && \
     apk del tzdata wget
 
