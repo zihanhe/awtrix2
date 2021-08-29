@@ -23,4 +23,4 @@ jobs:
     - name: login the docker hub
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: upload docker image
-      run: docker push smarthomefans/awtrix2;
+      run: docker push zihanhe/awtrix2;
